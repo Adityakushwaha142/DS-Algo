@@ -14,28 +14,22 @@ void onlinejudge() {
 
 int main() {
 	onlinejudge() ;
-	int n ;
-	cin >> n  ;
-	int a[n] ;
-	for ( int i = 0 ; i < n ; i++) {
+	int n  ;
+	cin >> n ;
+	int a [n] ;
+	for ( int i = 0; i < n  ; i++) {
 		cin >> a[i] ;
 	}
-
-	for ( int i = 0 ; i < n - 1 ; i++) {
-		int min_index = i;
-		for ( int j = i ; j < n ; j++) {
-			if (a[j] < a[i]) {
-				min_index = j ;
-
+	for ( int i = 1 ; i < n ; i++) {
+		for ( int j = 0 ; j < n - i ; j++) {
+			if (a[j ] > a[j + 1]) {
+				swap(a[j] , a[j + 1]) ;
 			}
-
 		}
-		swap(a[i] , a[min_index]) ;
 	}
 	for ( int i = 0 ; i < n ; i++) {
 		cout << a[i] << " " ;
 	}
-
 
 	return 0 ;
 }
