@@ -14,15 +14,19 @@ void onlinejudge() {
 
 int main() {
 	onlinejudge() ;
-	int  n ;
+	int n  ;
 	cin >> n ;
 	int a[n] ;
 	for ( int i = 0 ; i < n ; i++) {
 		cin >> a[i] ;
 	}
-	sort(a, a + n) ;
-	for ( int i = 0 ; i < n ; i++) {
-		cout << a[i] << " "  ;
+	for (int i = 0 ; i < n ; i++) {
+		for ( int j = i ; j < n ; j++) {
+			for ( int k = i ; k <= j ; k++) {
+				cout << a[k] << " " ;
+			}
+			cout << endl ;
+		}
 	}
 
 	return 0 ;
