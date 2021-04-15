@@ -14,20 +14,23 @@ void onlinejudge() {
 
 int main() {
 	onlinejudge() ;
-	int n  ;
-	cin >> n ;
-	int a[n] ;
-	for ( int i = 0 ; i < n ; i++) {
-		cin >> a[i] ;
-	}
-	for (int i = 0 ; i < n ; i++) {
-		for ( int j = i ; j < n ; j++) {
-			for ( int k = i ; k <= j ; k++) {
-				cout << a[k] << " " ;
-			}
-			cout << endl ;
+	int m , n ;
+	cin >> m >> n ;
+	int val = 1 ;
+	int a[m][n] ;
+	for ( int i = 0 ; i < m ; i++) {
+		for (int j = 0 ; j < n ; j++) {
+			a[i][j] = val ;
+			val++ ;
 		}
 	}
+	for (int i = 0 ; i < m ; i++) {
+		for ( int j = 0 ; j < n ; j++) {
+			cout << a[i][j] << " " ;
+		}
+		cout << endl ;
+	}
+
 
 	return 0 ;
 }
