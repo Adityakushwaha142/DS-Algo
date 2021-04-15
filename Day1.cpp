@@ -1,7 +1,5 @@
 #include<iostream>
 #include<bits/stdc++.h>
-#include<climits>
-#include<algorithm>
 
 using namespace std  ;
 void onlinejudge() {
@@ -18,15 +16,27 @@ int main() {
 	onlinejudge() ;
 	int n  ;
 	cin >> n ;
-	int a [n] ;
-	for ( int i = 0; i < n  ; i++) {
+	int a[n] ;
+	for ( int i = 0 ; i < n ; i++) {
 		cin >> a[i] ;
 	}
-	sort(a, a + n) ;
+
+	for (int i = 0 ; i < n ; i++) {
+		int min = i ;
+		for (int j = i ; j < n ; j++) {
+			if (a[j] < a[min]) {
+				min = j ;
+			}
+
+		}
+		swap(a[min]  , a[i])  ;
+	}
+
+
 	for ( int i = 0 ; i < n ; i++) {
 		cout << a[i] << endl ;
-
 	}
+
 	return 0 ;
 }
 
