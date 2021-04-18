@@ -1,5 +1,6 @@
 #include<iostream>
 #include<bits/stdc++.h>
+#include<string>
 
 using namespace std  ;
 void onlinejudge() {
@@ -10,37 +11,15 @@ void onlinejudge() {
 	freopen("output.txt", "w", stdout);
 #endif
 }
-bool ispalindrome(char a[100]) {
-	int i = 0 ;
-	int j = strlen(a) - 1 ;
-	while (i < j) {
-		if (a[i] == a[j]) {
-			i++ ;
-			j-- ;
-		}
-		else {
-			return false ;
-		}
-
-	}
-	return true ;
-}
 
 
 int main() {
 	onlinejudge() ;
-
-	char str[100]  ;
-	cin >> str ;
-	if (ispalindrome(str)) {
-		cout << "It is a Palindrome" ;
+	string s1 ;
+	getline(cin, s1) ;
+	for (auto it = s1.begin()  ; it != s1.end() ; it++) {
+		cout << (*it) << endl ;
 	}
-	else {
-		cout << "It is not a palindromwew " ;
-	}
-
-
-	return 0 ;
 }
 
 
